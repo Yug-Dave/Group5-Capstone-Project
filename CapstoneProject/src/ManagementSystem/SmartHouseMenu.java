@@ -22,16 +22,16 @@ public class SmartHouseMenu {
 
             switch (choice) {
                 case 1:
-                    chargingMenu.display(scanner); // Delegate to ChargingMenu
+                    chargingMenu.display(scanner); // Goes to ChargingMenu to continue the code...
                     break;
                 case 2:
-                    usingMenu.display(scanner); // Delegate to UsingMenu
+                    usingMenu.display(scanner);// Goes to UsingMenu to continue the code...
                     break;
                 case 3:
-                    batteriesMenu(scanner); // Placeholder
+                    batteriesMenu(scanner);
                     break;
                 case 4:
-                    showLogsMenu(scanner); // Placeholder
+                    showLogsMenu(scanner);
                     break;
                 case 5:
                     System.out.println("Exiting... Goodbye!");
@@ -43,11 +43,6 @@ public class SmartHouseMenu {
         }
 
         scanner.close();
-    }
-
-    // Placeholder for Using Menu
-    private static void usingMenu(Scanner scanner) {
-        System.out.println("Using feature is under construction.");
     }
 
     // Placeholder for Batteries Menu
