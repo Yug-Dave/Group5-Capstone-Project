@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class ChargingMenu {
 
-    // Track the status of each energy source (on/off)
     private boolean isSolarPanelOn = false;
     private boolean isWindTurbineOn = false;
     private boolean isUrbanElectricityOn = false;
@@ -76,10 +75,7 @@ public class ChargingMenu {
 
     // Yes/No menu implementation using switch-case
     private boolean showYesNoMenu(Scanner scanner, String message) {
-        boolean validInput = false;
-        boolean result = false;
-
-        while (!validInput) {
+        while (true) {
             System.out.println(message);
             System.out.println("1. Yes");
             System.out.println("2. No");
@@ -88,19 +84,14 @@ public class ChargingMenu {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
 
-            switch (choice) {
-                case 1:
-                    result = true;
-                    validInput = true;
-                    break;
-                case 2:
-                    result = false;
-                    validInput = true;
-                    break;
-                default:
-                    System.out.println("Invalid option. Please try again.");
+            if (choice == 1) {
+                return true;
+            } else if (choice == 2) {
+                return false;
+            } else {
+                System.out.println("Invalid option. Please try again.");
             }
         }
-        return result;
     }
+
 }
